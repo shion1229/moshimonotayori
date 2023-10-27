@@ -1,0 +1,40 @@
+<h2>Garbege一覧</h2>
+ <h3>投稿を検索</h3>
+ <%= form_tag({controller:"garbages",action:"index"}, method: :get) do %>
+   <%= text_field_tag :search, params[:search] %>
+   <%= submit_tag '検索する'  %>
+ <% end %>
+
+<%= link_to "トップ",:controller => "hello", :action => "index"%>
+<%= link_to "新規投稿へ", new_garbage_path %>
+<%= link_to 'gabs', :controller => "gabs", :action => "index" %>
+
+<div class="garbages-container">
+  <% @garbages.each do |t| %>
+  <div class="garbage">
+      <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      <%= t.body %>
+      <%= t.created_at %>
+      <%= link_to "詳細へ", garbage_path(t.id) %>
+      <%= link_to "編集する", edit_garbage_path(t.id) %>
+      <%= button_to "削除する",garbage_path(t.id), method: :delete %>
+
+    <h2>総合評価：
+      <span class="star-rating">
+         <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+         <span class="star-rating-back">★★★★★</span>
+      </span> 
+    </h2>
+  </div>
+  <% end %>
+
+  <%= form_tag({controller:"garbages",action:"index"}, method: :get) do %>
+    <% Tag.all.each do |t| %>
+        <li><%= check_box :tag_ids, t.name %><%= t.name %></li>
+    <% end %>
+        <%= submit_tag 'タグを追加' %>
+        <%= submit_tag '検索' %>
+        <%= text_field_tag :tag %>
+  <% end %>
+
+</div>

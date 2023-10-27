@@ -1,0 +1,14 @@
+<h1>Garbage</h1>
+<h3>Garbage詳細</h3>
+<div class="toilett">
+  <p><%= @garbage.body %></p>
+  <p><%= @garbage.created_at %></p>
+</div>
+
+<% @garbage.tags.each do |tag| %>
+  <span><%= tag.name %></span>
+<% end %>
+
+
+<%= link_to "編集する", edit_garbage_path(@garbage.id) %>
+<%= link_to "Garbage一覧に戻る", garbages_path %>

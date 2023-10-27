@@ -1,0 +1,14 @@
+<h1>Toilet</h1>
+<h3>Toilet詳細</h3>
+<div class="toilett">
+  <p><%= @toilet.body %></p>
+  <p><%= @toilet.created_at %></p>
+</div>
+
+<% @toilet.tags.each do |tag| %>
+  <span><%= tag.name %></span>
+<% end %>
+
+
+<%= link_to "編集する", edit_toilet_path(@toilet.id) %>
+<%= link_to "Toilet一覧に戻る", toilets_path %>
