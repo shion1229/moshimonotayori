@@ -1,9 +1,70 @@
-<h1>Moshimmonotayori</h1>
-<h3>新規Tweet</h3>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class ="button_toilet">
+         <div class="button_solid017">
+            <a href="http://localhost:3000/hello">Top</a>
+         </div>
+          <div class="button_solid018">
+            <a href="http://localhost:3000/toes">Home</a>
+          </div>
+          <div class="button_solid019">
+            <a href="http://localhost:3000/garbages">ゴミ箱一覧</a>
+          </div>
+          <div class="button_solid020">
+            <a href="http://localhost:3000/toilets">トイレ一覧</a>
+          </div>
+          <div class="button_solid021">
+            <a href="http://localhost:3000/maps">Map</a>
+          </div>
+        </div>
+    </div>
+</nav>
+<div class="toilet_post">
+
 <%= form_for @garbage do |f| %>
 
-  <div class='form-group'>
+  
+
+  <div class="post-container">
+    <p class="title">投稿フォーム</p>
+    <%= form_for(@garbage, :url => { controller:'garbages', action:'create'})do |f| %>
+
+    <div class="form-group row">
+      <%= f.label :title, 'タイトル', class:'col-md-3 col-form-label' %>
+        <div class="col-md-9">
+           <%= f.text_field :title, class: "form-controler" %>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="form-group row">
+    <%= f.label :title, '内容や住所等' , class:'col-md-3 col-form-label'%>
+        <div class="col-md-9">
+        <%= f.text_field :body,class: "form-controler" %>
+        </div>
+        
+    <% end %>
+
+    
+    
+
+    
+
+
+
+  <br></br>
+
+  <p>タグ選択</p>
+  <div class="form-group">
     <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+      
       <div class='form-check'>
           <%= tag.label class: 'form-check-label' do %>
               <%= tag.check_box class: 'form-check-input' %>
@@ -11,8 +72,15 @@
           <% end %>
       </div>
     <% end %>
+  </div>
 
-    <h5>総合評価</h5>
+  
+
+  
+
+  <div class="form-group row" id="star-rating">
+    <%= f.label :rate,'評価 ', class:'col-md-3 col-form-label' %>
+ 
      <div class="post_form">
         <%= f.radio_button :overall, 5 ,id: 'star1'%>
         <label for="star1"><span class="text">最高</span>★</label>
@@ -31,17 +99,28 @@
      </div>
   </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_field :body, :size => 140 %>
-  </div>
 
-  <div class="field">
-    <%= f.label :image %>
+
+  
+  <div class="form-group row" id="field">
+  <%= f.label :rate,'投稿画像 ', class:'col-md-3 col-form-label' %>
     <%= f.file_field :image %>
   </div>
 
-  <%= f.submit "Tweetする" %>
-  <%= f.submit '送信' %>
+  <br>  
+
+
+  <br>
+  <div class="form-group row justify-content-end">
+    <div class="col-md-12">
+      <%= f.submit "送信 ", class:"btn btn-success" %>
+    </div>
+  </div>
+    
+  <br>
+
+  </div>
 <% end %>
-<%= link_to "Garbage一覧に戻る", garbages_path %>
+</div>
+
+

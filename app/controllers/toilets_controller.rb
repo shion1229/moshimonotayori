@@ -1,5 +1,5 @@
 class ToiletsController < ApplicationController
-
+  
   def index
     if params[:search] == nil
       @toilets= Toilet.all
@@ -9,6 +9,7 @@ class ToiletsController < ApplicationController
       @toilets = Toilet.where("body LIKE ? ",'%' + params[:search] + '%')
     end
 
+    
     if params[:tag_ids]
       @toilets = []
       params[:tag_ids].each do |key, value|
@@ -19,11 +20,19 @@ class ToiletsController < ApplicationController
       end
     end
 
+    
+
+
     if params[:tag]
       Tag.create(name: params[:tag])
     end
 
+
   end
+
+ 
+ 
+
 
 
   def new
@@ -67,6 +76,12 @@ class ToiletsController < ApplicationController
 
   private
   def toilet_params
-    params.require(:toilet).permit(:body, :overall, :image, tag_ids:[])
+    params.require(:toilet).permit(:body, :content, :title, :overall, :image, tag_ids:[])
   end
+
+  
 end
+
+
+
+

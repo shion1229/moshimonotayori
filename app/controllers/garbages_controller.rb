@@ -51,7 +51,7 @@ class GarbagesController < ApplicationController
       def update
         garbage = Garbage.find(params[:id])
         if garbage.update(garbage_params)
-          redirect_to :action => "show", :id => toilet.id
+          redirect_to :action => "show", :id => garbage.id
         else
           redirect_to :action => "new"
         end
@@ -67,4 +67,5 @@ class GarbagesController < ApplicationController
       def garbage_params
         params.require(:garbage).permit(:body,:image,:overall,tag_ids:[])
       end
+
 end

@@ -1,40 +1,96 @@
-<h2>Garbege一覧</h2>
- <h3>投稿を検索</h3>
- <%= form_tag({controller:"garbages",action:"index"}, method: :get) do %>
-   <%= text_field_tag :search, params[:search] %>
-   <%= submit_tag '検索する'  %>
- <% end %>
+<h4 align="left">ゴミ箱</h4>
 
-<%= link_to "トップ",:controller => "hello", :action => "index"%>
+ <!-- Navigation-->
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+     <div class="container">
+         <a class="navbar-brand" href="#page-top"></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+             Menu
+             <i class="fas fa-bars ms-1"></i>
+         </button>
+         <div class ="button_toilet">
+           <div class="button_solid017">
+            <a href="http://localhost:3000/hello">Top</a>
+           </div>
+           <div class="button_solid018">
+            <a href="http://localhost:3000/toes">Home</a>
+           </div>
+           <div class="button_solid019">
+            <a href="http://localhost:3000/garbages">ゴミ箱一覧</a>
+           </div>
+           <div class="button_solid020">
+            <a href="http://localhost:3000/toilets">トイレ一覧</a>
+           </div>
+           <div class="button_solid021">
+            <a href="http://localhost:3000/maps">Map</a>
+           </div>
+         </div>
+         
+     </div>
+ </nav>
+ 
+
+<div class = all>
+<div class="bg_test">
+  <div class="bg_test-text">
+ 
+  <h1 align="center">トイレ投稿一覧</h1>
+
+  <h3 align="center">投稿内容</h2> 
+  <br>
+  <div class="search icon"></div>
+  <div class ="tagtag">
+  <%= form_tag({controller:"garbages",action:"index"}, method: :get) do %>  
+    <%= text_field_tag :search %>
+    <%= submit_tag '投稿内容を検索する',class:"btn btn-dark mt-3" %>
+  <% end %>
+  </div>  
+
+
 <%= link_to "新規投稿へ", new_garbage_path %>
-<%= link_to 'gabs', :controller => "gabs", :action => "index" %>
+
 
 <div class="garbages-container">
-  <% @garbages.each do |t| %>
-  <div class="garbage">
-      <%= image_tag t.image_url, size: "250x200" if t.image? %>
-      <%= t.body %>
-      <%= t.created_at %>
-      <%= link_to "詳細へ", garbage_path(t.id) %>
-      <%= link_to "編集する", edit_garbage_path(t.id) %>
-      <%= button_to "削除する",garbage_path(t.id), method: :delete %>
 
-    <h2>総合評価：
-      <span class="star-rating">
-         <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
-         <span class="star-rating-back">★★★★★</span>
-      </span> 
-    </h2>
+<div class="garbage">
+<% @garbages.each do |t| %>
+  <div class="toilet2">
+
+      <p><%= image_tag t.image_url, size: "200x150" if t.image? %>
+      <p><%= t.title %>
+      <p><%= t.body %>
+      <p><%= t.created_at %>
+      <p><%= link_to "詳細へ", garbage_path(t.id),class:"btn btn-dark mt-3" %>
+      <p><%= link_to "編集する", edit_garbage_path(t.id),class:"btn btn-dark mt-3" %>
+      
+      <p><h5>総合評価：
+          <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+          </span> 
   </div>
-  <% end %>
+<% end %>
+</div>
+
 
   <%= form_tag({controller:"garbages",action:"index"}, method: :get) do %>
-    <% Tag.all.each do |t| %>
+    <h5 align="center">タグ</h5>
+        <% Tag.all.each do |t| %>
+      <div class= "tag">
         <li><%= check_box :tag_ids, t.name %><%= t.name %></li>
+      </div>
     <% end %>
-        <%= submit_tag 'タグを追加' %>
-        <%= submit_tag '検索' %>
-        <%= text_field_tag :tag %>
+    <%= submit_tag 'タグを検索', class:"btn btn-dark mt-3"%>
+    
+    
   <% end %>
 
+  
+
+</div>
+
+
+
+  </div>
+</div>
 </div>

@@ -1,16 +1,52 @@
 
 <h2>gmap</h2>
+<div class = "map_index">
 
-<input id="address" type="textbox" value="GeekSalon">
-<input type="button" value="Encode" onclick="codeAddress()">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class ="button_toilet">
+          <div class="button_solid017">
+           <a href="http://localhost:3000/hello">Top</a>
+          </div>
+          <div class="button_solid018">
+           <a href="http://localhost:3000/toes">Home</a>
+          </div>
+          <div class="button_solid019">
+           <a href="http://localhost:3000/garbages">ゴミ箱一覧</a>
+          </div>
+          <div class="button_solid020">
+           <a href="http://localhost:3000/toilets">トイレ一覧</a>
+          </div>
+          <div class="button_solid021">
+           <a href="http://localhost:3000/maps">Map</a>
+          </div>
+         </div>
+        
+    </div>
+</nav>
 
-<div id="display">何かが表示される、、、、！</div>
+<input id="address" type="textbox" value="ここで検索">
+<input type="button" value="検索" onclick="codeAddress()">
 
+
+<div id="display">調べたい場所をここで検索</div>
+
+<div class="map-sc">
 <div id='map'></div>
+</div>
 
 <style>
 #map {height: 600px;width: 600px;}
 </style>
+
+
+<div class="map">
 
 <script>
 let map
@@ -51,5 +87,15 @@ function codeAddress(){
   });   
 }
 
+
+
 </script>
+
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAYfnipkw3_QXU4dmwM8WzGDxikGwKMOs&callback=initMap" async defer></script>
+</div>
+
+</div> 
+</div>
+</div>
+

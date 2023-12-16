@@ -1,14 +1,37 @@
-<h1>Toilet</h1>
-<h3>Toilet詳細</h3>
-<div class="toilett">
-  <p><%= @toilet.body %></p>
-  <p><%= @toilet.created_at %></p>
+<div class="cover-show">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1 class="font-weight-normal mt-5 mb-5">投稿詳細</h1>
+    </div>
+    <div class="row justify-content-center d-block">
+      
+      <div class="toilet_show">
+          <p><%= image_tag @toilet.image_url,size: "300x200" %>
+      <div class="toilet_show2">
+      <div class="toilet_show5">
+          <p>タイトル      <%= @toilet.title %>
+      </div>
+      <div class="toilet_show3">
+          <p>内容      <%= @toilet.body %>
+      </div>
+      <div class="toilet_show4">
+          <p>日付      <%= @toilet.created_at %>
+      </div>
+
+        <% @toilet.tags.each do |tag| %>
+          <p>   <%= tag.name %>
+        <% end %>
+      </div>  
+      </div>
+
+      <%= link_to '編集する', edit_toilet_path(@toilet.id), class: "btn btn-info mr-3" %>
+      <%= link_to '投稿一覧ページへ', toilets_path, class: "btn btn-dark mt-3" %>
+      <%= button_to '削除する', toilet_path(@toilet.id),method: :delete, "data-confirm"=>"本当に消しますか？", class: "btn btn-danger" %><br>
+    </div>
+
+  </div>
 </div>
 
-<% @toilet.tags.each do |tag| %>
-  <span><%= tag.name %></span>
-<% end %>
 
 
-<%= link_to "編集する", edit_toilet_path(@toilet.id) %>
-<%= link_to "Toilet一覧に戻る", toilets_path %>
+

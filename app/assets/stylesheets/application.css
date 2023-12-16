@@ -21,27 +21,39 @@
     padding: 0;
     margin: 0;
   }
+  h1 {
+    font-size: 30px;
+    margin-left: 30px;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+
+  }
   body {
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+    font-family: "Amatic SC", "ヒラギノ角ゴ Pro W3", "メイリオ",
       Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 15px;
   }
   header {
-    background-color: #00acee;
-    height: 50%;
+    background: linear-gradient(90deg, rgb(247, 199, 182), rgb(151, 205, 249));
+    height: 50px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+
   header a {
-    color: white; 
+    background-image: url(https://assets.renovefudosan.com/production/images/column/3697/30f9ce0183ddf00b69fceb23f8122f5e.jpg);
+    color: rgb(12, 19, 22); 
     text-decoration: none; 
   }
   header h1 {
-    color: white;
+    color: rgb(245, 249, 250);
     margin-left: 20px;
   }
   .header-list {
+    background-image: url();
     display: flex;
     align-items: center;
   }
@@ -52,14 +64,11 @@
     list-style: none;
     margin-right: 40px;
   }
-  footer {
-    color: white;
-    height: 30px;
-    background-color: #5caaa9;
+
+  footer{
+    position: absolute;/*←絶対位置*/
     bottom: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    justify-content: flex-end;
   }
+  
+ 
+

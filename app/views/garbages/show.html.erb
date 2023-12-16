@@ -1,14 +1,37 @@
-<h1>Garbage</h1>
-<h3>Garbage詳細</h3>
-<div class="toilett">
-  <p><%= @garbage.body %></p>
-  <p><%= @garbage.created_at %></p>
+<div class="cover-show">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1 class="font-weight-normal mt-5 mb-5">投稿詳細</h1>
+    </div>
+    <div class="row justify-content-center d-block">
+      
+      <div class="toilet_show">
+          <p><%= image_tag @garbage.image_url,size: "300x200" %>
+      <div class="toilet_show2">
+      <div class="toilet_show5">
+          <p>タイトル      <%= @garbage.title %>
+      </div>
+      <div class="toilet_show3">
+          <p>内容      <%= @garbage.body %>
+      </div>
+      <div class="toilet_show4">
+          <p>日付      <%= @garbage.created_at %>
+      </div>
+
+        <% @garbage.tags.each do |tag| %>
+          <p>   <%= tag.name %>
+        <% end %>
+      </div>  
+      </div>
+
+      <%= link_to '編集する', edit_garbage_path(@garbage.id), class: "btn btn-info mr-3" %>
+      <%= link_to '投稿一覧ページへ', garbages_path, class: "btn btn-dark mt-3" %>
+      <%= button_to '削除する', toilet_path(@garbage.id),method: :delete, "data-confirm"=>"本当に消しますか？", class: "btn btn-danger" %><br>
+    </div>
+
+  </div>
 </div>
 
-<% @garbage.tags.each do |tag| %>
-  <span><%= tag.name %></span>
-<% end %>
 
 
-<%= link_to "編集する", edit_garbage_path(@garbage.id) %>
-<%= link_to "Garbage一覧に戻る", garbages_path %>
+

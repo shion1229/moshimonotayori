@@ -5,10 +5,13 @@ Rails.application.routes.draw do
   resources :toes
   resources :garbages
   resources :gabs
+  resources :maps
+
+
   #resources :gabs
 
   get 'maps/index'
-  root to: 'maps#index'
+  root 'hello#index'
   resources :maps, only: [:index]
 
 end

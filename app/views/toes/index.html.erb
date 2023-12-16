@@ -1,4 +1,68 @@
-Toes!
-<%= link_to 'homeへ', :controller => "hello", :action => "index" %>
-<%= link_to 'トイレビュー', :controller => "toilets", :action => "index" %>
-  <%= link_to 'map', :controller => "toes", :action => "index" %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Agency - Moshimonotayori</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="http://localhost:3000/hello" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        
+        <!-- Masthead-->
+        <header class="masthead">
+          <div class = "container">
+            <div class="container">
+                <div class="masthead-subheading">あなたのもしもの頼りになりますように!</div>
+                <div class="masthead-heading text-uppercase">Moshiomonotayori</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#こんにちは">クリック</a>
+            </div>
+          </div>
+        </header>
+        <!-- こんにちは-->
+        <section class="page-Section" id="こんにちは">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="Section-heading text-uppercase">文字の下のアイコンをクリックしてね♪</h2>
+                    <h3 class="Section-subheading text-muted"></h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Topへ</h4>
+              
+                        <a class="btn btn-dark btn-social mx-2" href="http://localhost:3000/hello" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">トイレ一覧</h4>
+                        <a class="btn btn-dark btn-social mx-2" href="http://localhost:3000/toilets" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">map</h4>
+                        <a class="btn btn-dark btn-social mx-2" href="http://localhost:3000/maps" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -4,4 +4,6 @@ class AddTitleToToilets < ActiveRecord::Migration[6.1]
     add_column :toilets, :address, :string
     add_column :toilets, :about, :text
   end
+
+
 end

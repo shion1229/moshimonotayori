@@ -1,3 +1,54 @@
 // Place all the styles related to the hello controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.relative{
+    background-image: url(https://t3.ftcdn.net/jpg/05/97/98/00/360_F_597980036_zpwuU01LHuXy07kPnMbWInFnZbikVuD0.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    margin:20px;
+    background-color: #52a4a4;
+
+}
+
+.bg_test-text {
+    border:  solid 1px;                             /* 枠線指定 */
+    display:  inline-block;                         /* インラインブロックにする */
+    padding: 10px 20px;                             /* 余白指定 */
+    background-color: rgba(32, 27, 27, 0.7);     /* 背景色指定 */
+}
+.bg_test {
+    background-image: url();    /* 背景画像指定 */
+    text-align:  center;    /* 文字中央寄せ */
+    padding:  150px;        /* 余白指定 */
+    border: solid 2px;      /* 枠線指定 */
+    
+}
+
+.img-inner {
+    width:500px;
+    height:500px;
+    padding-left:10%;
+    padding-right:10%;
+}
+.flex {
+    background-image: url(https://assets.renovefudosan.com/production/images/column/3697/30f9ce0183ddf00b69fceb23f8122f5e.jpg);
+    width:500px;
+    text-align:  left;
+    font-family: serif;
+    font-size: 30px;
+    
+}
+
+.justify-between{
+    background-image: url(https://assets.renovefudosan.com/production/images/column/3697/30f9ce0183ddf00b69fceb23f8122f5e.jpg);
+    width:500px;
+    text-align:  left;
+}
+
+
+
+
+

@@ -1,3 +1,223 @@
-Top!
-<%= link_to 'トイレをご利用の方はここを押してね！', :controller => "toes", :action => "index" %>
-<%= link_to 'ゴミ箱をご利用の方はここを押してね！', :controller => "gabs", :action => "index" %>
+<!DOCTYPE html>
+<html lang="ja" class="dark html-bg-white">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <meta name="viewport-extra" content="width=device-width,initial-scale=1,min-width=375"/>
+        <meta name="p:domain_verify" content="6e380e9ac7a0d27fc88906cee1ac197a"/>
+        <!-- font loading -->
+        <link rel="preload" href="https://liginc.co.jp/wp-content/themes/ligblog2022/assets/fonts/NotoSansJP-Medium.woff2" as="font" type="font/woff2" crossorigin>
+        <style>
+            @font-face {
+                font-family: 'Noto Sans JP';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url('https://liginc.co.jp/wp-content/themes/ligblog2022/assets/fonts/NotoSansJP-Medium.woff2') format('woff2');
+            }
+        </style>
+        <link rel="preload" href="https://liginc.co.jp/wp-content/themes/ligblog2022/assets/fonts/NotoSansJP-Bold.woff2" as="font" type="font/woff2" crossorigin>
+        <style>
+            @font-face {
+                font-family: 'Noto Sans JP';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: url('https://liginc.co.jp/wp-content/themes/ligblog2022/assets/fonts/NotoSansJP-Bold.woff2') format('woff2');
+            }
+        </style>
+        <!-- /font loading -->
+        <link href="https://liginc.co.jp/wp-content/themes/ligblog2022/assets/styles/index.css?ver=1.3" rel="stylesheet"/>
+        <link rel="icon" href="https://liginc.co.jp/wp-content/themes/ligblog2022/assets/images/favicon.ico" sizes="any">
+        <title>Blog Top | 株式会社LIG(リグ)｜DX支援・システム開発・Web制作</title>
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'/>
+        <!-- This site is optimized with the Yoast SEO plugin v19.1 - https://yoast.com/wordpress/plugins/seo/ -->
+        <meta name="description" content="「LIGブログ」はDX、デザイン、マーケティングに関する情報を社員が発信するオウンドメディアです。ビジネスのヒントや日々の業務の効率化、キャリアに役立つ情報を掲載しています。"/>
+        <link rel="canonical" href="https://liginc.co.jp/blog"/>
+        <link rel="next" href="https://liginc.co.jp/blog/page/2"/>
+        <meta property="og:locale" content="ja_JP"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Blog Top | 株式会社LIG(リグ)｜DX支援・システム開発・Web制作"/>
+        <meta property="og:description" content="「LIGブログ」はDX、デザイン、マーケティングに関する情報を社員が発信するオウンドメディアです。ビジネスのヒントや日々の業務の効率化、キャリアに役立つ情報を掲載しています。"/>
+        <meta property="og:url" content="https://liginc.co.jp/blog"/>
+        <meta property="og:site_name" content="株式会社LIG(リグ)｜DX支援・システム開発・Web制作"/>
+        <meta property="og:image" content="https://liginc.co.jp/wp-content/uploads/2022/06/ogimg.gif"/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="630"/>
+        <meta property="og:image:type" content="image/gif"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@LIG_J"/>
+        <!-- / Yoast SEO plugin. -->
+        <script type='text/javascript' src='https://liginc.co.jp/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+        <script type='text/javascript' src='https://liginc.co.jp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSHJDH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0]
+                  , j = d.createElement(s)
+                  , dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            }
+            )(window, document, 'script', 'dataLayer', 'GTM-PSHJDH');
+        </script>
+        <!-- End Google Tag Manager -->
+        <!-- Adobe font loading -->
+        <script>
+            (function(d) {
+                var config = {
+                    kitId: 'ejf0okh',
+                    scriptTimeout: 3000,
+                    async: true
+                }, h = d.documentElement, t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a;
+                h.className += " wf-loading";
+                tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+                tk.async = true;
+                tk.onload = tk.onreadystatechange = function() {
+                    a = this.readyState;
+                    if (f || a && a != "complete" && a != "loaded")
+                        return;
+                    f = true;
+                    clearTimeout(t);
+                    try {
+                        Typekit.load(config)
+                    } catch (e) {}
+                }
+                ;
+                s.parentNode.insertBefore(tk, s)
+            }
+            )(document);
+        </script>
+    </head>
+    
+    </a>
+    </li>
+</ul>
+
+
+                                <div class="relative col-span-4 md:flex-1 text-gray-100 md:flex flex-col md:relative xl:pr-[3rem]">
+                                    <div class="flex justify-between items-center mt-[10px] md:mb-[20px] lg:mb-0">
+                                        <div class="flex items-center">
+                                            <div class="flex items-center md:mr-[16px]">
+                                              <div class = "anata">
+                                                <div class="w-[25px] h-[25px] md:w-[1.2rem] md:h-[1.2rem] mr-[10px] bg-center bg-cover bg-no-repeat rounded-full" style="background-image: url(https://www.silhouette-illust.com/wp-content/uploads/2017/04/man_pictogram_29251-600x600.jpg)"></div>
+                                            </div>
+                                              
+                                                <div class="md:mb-0 w-full lg:text-[0.9rem] text-[16px] md:text-[16px] xl:text-[40px] pt-[18px] lg:mt-[10px] leading-[1.5] md:leading-[1.6] tracking-[1.2px] md:tracking-[0.04em]">あなたのもしものためのサイトへようこそ</div> 
+                                              </div>  
+                                        </div> 
+                                    </div>
+                                </div>                                           
+                          
+                                   
+                    
+<!-- /Blog Sidebar Keywords -->
+<div class="hidden md:block" id="js-list-banner-pc">
+<!--      -->
+<!--        <div class="rounded-[8px] overflow-hidden mb-[15px]">-->
+<!--          <a href="-->
+<!--">-->
+<!--            -->
+<!--          </a>-->
+<!--        </div>-->
+<!--      -->
+</div>
+</div>
+</div>
+</div>
+<div class="md:hidden py-[25px] px-[1.67rem] rounded-[5px] mb-[40px] border border-gray-100/10" id="js-list-banner-sp">
+<!--    -->
+<!--      <div class="rounded-[8px] overflow-hidden mb-[15px] last:mb-0">-->
+<!--        <a href="-->
+<!--">-->
+<!--          -->
+<!--        </a>-->
+<!--      </div>-->
+<!--    -->
+</div>
+
+
+<div class="pb-[15px] md:pb-[82px]">
+<div class="article-grid flex md:flex-row font-normal flex-col   items-baseline">
+
+
+
+</div>
+</div>
+</div>
+</main>
+
+<div class="bg-[#f7f7f7] footer-links-list px-[1rem] md:px-[2rem]">
+<!-- contact footer links -->
+<div class="img-link-wrapper">
+<div class="w-full mb-[1rem] md:mb-0">
+<a class="item-link rounded-[5px] md:rounded-[8px] overflow-hidden relative z-[1]" href="http://localhost:3000/gabs">
+<div class="img-item">
+    <div class="img-inner">
+        <picture>
+            <img src="https://free-materials.com/adm/wp-content/uploads/2016/09/c664090589f9dfae9044d93cd07e689c-750x499.jpg" width="780" height="900">
+
+        </picture>
+    </div>
+</div>
+
+<div class="txt-item txt-item-animation-single-line absolute z-[1] !translate-y-0">
+    <h4 class="txt-item-title font-en-big text-white-100">
+        <span class="txt-item-inner">ゴミ箱</span>
+    </h4>
+    <p class="txt-item-desc md:text-[15px] text-[16px] font-bold text-white-100 !opacity-100">ご利用の方はクリック</p>
+</div>
+</a>
+</div>
+<div class="w-full ">
+<a class="item-link rounded-[5px] md:rounded-[8px] overflow-hidden relative z-[1]" href= "http://localhost:3000/toes">
+<div class="img-item">
+    <div class="img-inner">
+        <picture>
+            <source media="(min-width: 750px)" srcset="https://illustimage.com/photo/thum/305_2.png?20160704" width="1500" height="860"/>
+            <source media="(max-width: 751px)" srcset="https://illustimage.com/photo/thum/305_2.png?20160704" width="375" height="500"/>
+            <img src="https://illustimage.com/photo/thum/305_2.png?20160704" class="w-full" height="860" alt="New Graduates"/>
+        </picture>
+    </div>
+</div>
+<div class="txt-item txt-item-animation-single-line absolute z-[1] !translate-y-0">
+    <h4 class="txt-item-title font-en-big text-white-100">
+        <span class="txt-item-inner">トイレ</span>
+    </h4>
+    <p class="txt-item-desc md:text-[15px] text-[16px] font-bold text-white-100 !opacity-100">ご利用の方はクリック</p>
+</div>
+</a>
+</div>
+<a class="item-link rounded-[5px] md:rounded-[8px] overflow-hidden relative z-[1]" href= "http://localhost:3000/maps">
+<div class="img-item">
+    <div class="img-inner">
+        <picture>
+            <source media="(min-width: 750px)" srcset="https://4.bp.blogspot.com/-a7WEvuIz_-4/W1vhClOop5I/AAAAAAABNtY/FjTJQ-3P41AFPX8QSCZXLU05YgKc8xntACLcBGAs/s800/character_earth_chikyu.png" width="1500" height="860"/>
+            <source media="(max-width: 751px)" srcset="https://thumb.photo-ac.com/e3/e35a9ec950dd64a53b3395ced2ea77c0_w.jpeg" width="375" height="500"/>
+            <img src="https://thumb.photo-ac.com/e3/e35a9ec950dd64a53b3395ced2ea77c0_w.jpeg" class="w-full" height="860" alt="New Graduates"/>
+        </picture>
+    </div>
+</div>
+<div class="txt-item txt-item-animation-single-line absolute z-[1] !translate-y-0">
+    <h4 class="txt-item-title font-en-big text-white-100">
+        <span class="txt-item-inner">map</span>
+    </h4>
+    <p class="txt-item-desc md:text-[15px] text-[16px] font-bold text-white-100 !opacity-100">ご利用の方はクリック</p>
+</div>
+</a>
+</div><br></border>
+
+</body>
+</html>
+
